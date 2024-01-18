@@ -1,6 +1,6 @@
 import pygame as pg
 
-from ObjectPackage.constants import *
+from ObjectPackage.Constants import *
 
 # set up the init of pygame
 pg.init()

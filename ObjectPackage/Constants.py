@@ -12,3 +12,6 @@ YELLOW = (255, 255, 0)
 GREEN = (0, 106, 78)
 BLUE = (100, 149, 237)
 RED = (133, 1, 1)
+
+# Physical Constants
+
