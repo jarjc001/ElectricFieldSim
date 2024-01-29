@@ -20,16 +20,10 @@ def main():
         # max fps
         clock.tick(FRAME_RATE)
 
-
         WIN.fill(BLACK)
-
 
         for event in pg.event.get():
             if event.type == pg.QUIT:
                 run = False
 
     pg.quit()
-
-
-
-
