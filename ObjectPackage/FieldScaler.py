@@ -2,7 +2,7 @@
 # will shrink in size based on the abs size of the field at that point
 # +ve being positive field and -ve being negative field
 # it will also change sign based on if the point is negative or positive
-from Constants import *
+from ObjectPackage.Constants import *
 import pygame as pg
 import math
 
@@ -14,7 +14,7 @@ class FieldScaler:
     with change in size and shape based on the Electric field strength
     """
 
-    def __init__(self, x, y) -> None:
+    def __init__(self, x, y):
         self.x = x
         self.y = y
         self.E: float = 0.0

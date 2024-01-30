@@ -11,6 +11,10 @@ SCALER_SIZE = 10
 # thickness of field scaler
 SCALER_THICKNESS = 3
 
+# number of scaler points of the sim
+# one length
+NUM_OF_POINTS = 18
+
 # max frame rate of sim
 FRAME_RATE: int = 60
 

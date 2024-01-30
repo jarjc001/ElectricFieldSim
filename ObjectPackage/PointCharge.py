@@ -1,4 +1,4 @@
-from Constants import *
+from ObjectPackage.Constants import *
 import pygame as pg
 import math
 
@@ -10,7 +10,7 @@ class PointCharge:
     and if they are +ve or -ve
     """
 
-    def __init__(self, x, y, q) -> None:
+    def __init__(self, x, y, q):
         """
         init for a point charge
         :param x: x positon
