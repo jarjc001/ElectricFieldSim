@@ -5,9 +5,9 @@ WIDTH: int = 800
 HEIGHT: int = 800
 
 # size of point charge
-CHARGE_SIZE = 20
+CHARGE_SIZE = 15
 # max size of field scaler point
-SCALER_SIZE = 10
+SCALER_SIZE = 40
 # thickness of field scaler
 SCALER_THICKNESS = 3
 

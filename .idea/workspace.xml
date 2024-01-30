@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41d1b6f3-dcca-4fa8-9341-874787d8f031" name="Changes" comment="added shapes draw to field scaler">
+    <list default="true" id="41d1b6f3-dcca-4fa8-9341-874787d8f031" name="Changes" comment="added grid of scaler points">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ObjectPackage/Constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/ObjectPackage/Constants.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ObjectPackage/FieldScaler.py" beforeDir="false" afterPath="$PROJECT_DIR$/ObjectPackage/FieldScaler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjectPackage/PointCharge.py" beforeDir="false" afterPath="$PROJECT_DIR$/ObjectPackage/PointCharge.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706619619600</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added grid of scaler points">
+      <created>1706621443123</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706621443123</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,6 +117,7 @@
     <MESSAGE value="created the point charge class" />
     <MESSAGE value="added to the field sclar object,&#10;created E cal and update point method&#10;need to create cal size of point method" />
     <MESSAGE value="added shapes draw to field scaler" />
-    <option name="LAST_COMMIT_MESSAGE" value="added shapes draw to field scaler" />
+    <MESSAGE value="added grid of scaler points" />
+    <option name="LAST_COMMIT_MESSAGE" value="added grid of scaler points" />
   </component>
 </project>

@@ -28,28 +28,21 @@ class FieldScaler:
         :return: the Electric field
         """
         charge_x, charge_y = charge.x, charge.y
-        distance_x = charge_x - self.x
-        distance_y = charge_y - self.y
-        distance = math.sqrt(distance_x ** 2 + distance_y ** 2)
+        distance_x = abs(charge_x - self.x)
+        distance_y = abs(charge_y - self.y)
+        distance_sqrt = (distance_x ** 2) + (distance_y ** 2)
 
-        E = COULOMB_CONST * charge.q / distance ** 2
+        return charge.q / distance_sqrt
 
         # vector E
         # theta = math.atan2(distance_y, distance_x)
         # E_x = math.cos(theta) * E
         # E_y = math.sin(theta) * E
 
-        return E
-
     def cal_size_of_point(self) -> None:
         """
         cal the size of field scaler point
         """
-        # colour
-        if self.E == 0.0:  # 0
-            self.size = SCALER_THICKNESS
-            return
-        # size
         self.size = abs(self.E) * SCALER_SIZE
 
     def update_point(self, charges: list) -> None:
@@ -67,8 +60,8 @@ class FieldScaler:
 
     def draw(self, win) -> None:
         # pygame sets 0,0 to top left
-        x = self.x + (WIDTH / 2)
-        y = self.y + (HEIGHT / 2)
+        x = self.x
+        y = self.y
 
         if self.E > 0.0:  # positive
             # +ve plus sign
@@ -88,6 +81,6 @@ class FieldScaler:
                                         (x - self.size, y))
                             , SCALER_THICKNESS)
         else:  # 0
-            pg.draw.circle(win, GREEN, (x, y), self.size)
+            pg.draw.circle(win, GREEN, (x, y), SCALER_THICKNESS)
 
 
