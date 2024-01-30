@@ -18,6 +18,9 @@ NUM_OF_POINTS = 12
 # the strength of a point charge's charge in C
 Q_POINT = 100
 
+# interval of increase/decrease in E
+Q_INTERVAL = 5
+
 # max frame rate of sim
 FRAME_RATE: int = 60
 
