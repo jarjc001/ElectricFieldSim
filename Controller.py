@@ -60,7 +60,7 @@ def main():
                 run = False
 
             if event.type == pg.MOUSEBUTTONDOWN:
-                charge = pc.PointCharge(*mouse_pos, 50)
+                charge = pc.PointCharge(*mouse_pos, 100)
                 point_charges.append(charge)
 
         for charges in point_charges:

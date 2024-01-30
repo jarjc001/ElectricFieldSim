@@ -7,13 +7,13 @@ HEIGHT: int = 800
 # size of point charge
 CHARGE_SIZE = 15
 # max size of field scaler point
-SCALER_SIZE = 40
+SCALER_SIZE = 100
 # thickness of field scaler
 SCALER_THICKNESS = 3
 
 # number of scaler points of the sim
 # one length
-NUM_OF_POINTS = 18
+NUM_OF_POINTS = 12
 
 # max frame rate of sim
 FRAME_RATE: int = 60
