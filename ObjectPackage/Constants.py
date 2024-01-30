@@ -15,6 +15,9 @@ SCALER_THICKNESS = 3
 # one length
 NUM_OF_POINTS = 12
 
+# the strength of a point charge's charge in C
+Q_POINT = 100
+
 # max frame rate of sim
 FRAME_RATE: int = 60
 

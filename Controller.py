@@ -29,6 +29,8 @@ def main():
     # point charge objects in the sim
     point_charges = []
 
+    new_charge_sign = Q_POINT
+
     while run:
         # max fps
         clock.tick(FRAME_RATE)
@@ -56,12 +58,23 @@ def main():
         mouse_pos = pg.mouse.get_pos()
 
         for event in pg.event.get():
+            # exit sim
             if event.type == pg.QUIT:
                 run = False
 
+            # create a new point charge
             if event.type == pg.MOUSEBUTTONDOWN:
-                charge = pc.PointCharge(*mouse_pos, 100)
+                charge = pc.PointCharge(*mouse_pos, new_charge_sign)
                 point_charges.append(charge)
+
+            if event.type == pg.KEYDOWN:
+                # clear point charges
+                if event.key == pg.K_x:
+                    point_charges.clear()
+
+                # change sign of new point charges
+                if event.key == pg.K_q:
+                    new_charge_sign *= -1
 
         for charges in point_charges:
             charges.draw(WIN)
