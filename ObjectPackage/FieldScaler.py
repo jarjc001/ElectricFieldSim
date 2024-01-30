@@ -14,11 +14,12 @@ class FieldScaler:
     with change in size and shape based on the Electric field strength
     """
 
-    def __init__(self, x, y):
+    def __init__(self, x, y) -> None:
         self.x = x
         self.y = y
-        self.E: float = 0
+        self.E: float = 0.0
         self.colour = GREEN
+        self.size = SCALER_SIZE
 
     def cal_E(self, charge) -> float:
         """
@@ -40,21 +41,53 @@ class FieldScaler:
 
         return E
 
-    def cal_size_of_point(self):
-        # cal the shape, size and colour of point
+    def cal_size_of_point(self) -> None:
+        """
+        cal the size of field scaler point
+        """
+        # colour
+        if self.E == 0.0:  # 0
+            self.size = SCALER_THICKNESS
+            return
+        # size
+        self.size = abs(self.E) * SCALER_SIZE
 
-        if self.E > 0.0:  # positive
-            self.colour = RED
-        elif self.E < 0.0:  # negative
-            self.colour = BLUE
-        else:  # 0
-            self.colour = GREEN
-
-        pass
-
-    def update_point(self, charges):
+    def update_point(self, charges: list) -> None:
+        """
+        update the scaler point for each frame of the sim
+        :param charges: each point charge in the sim in a list
+        """
         total_E = 0
         for charge in charges:
             total_E += self.cal_E(charge)
 
+        self.E = total_E
+        self.cal_size_of_point()
         ## calulate size of shape here or have
+
+    def draw(self, win) -> None:
+        # pygame sets 0,0 to top left
+        x = self.x + (WIDTH / 2)
+        y = self.y + (HEIGHT / 2)
+
+        if self.E > 0.0:  # positive
+            # +ve plus sign
+            pg.draw.polygon(win, RED, ((x, y),
+                                       (x, self.size + y),
+                                       (x, y),
+                                       (self.size + x, y),
+                                       (x, y),
+                                       (x, y - self.size),
+                                       (x, y),
+                                       (x - self.size, y)
+                                       )
+                            , SCALER_THICKNESS)
+
+        elif self.E < 0.0:  # negative
+            pg.draw.polygon(win, BLUE, ((self.size + x, y),
+                                        (x - self.size, y))
+                            , SCALER_THICKNESS)
+        else:  # 0
+            pg.draw.circle(win, GREEN, (x, y), self.size)
+
+

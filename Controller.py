@@ -22,8 +22,29 @@ def main():
 
         WIN.fill(BLACK)
 
+        # test shapes
+        # pg.draw.polygon(WIN, BLUE, ((SCALER_SIZE + WIDTH / 4, WIDTH / 4),
+        #                             (WIDTH / 4- SCALER_SIZE, WIDTH / 4))
+        #                 , SCALER_THICKNESS)
+        #
+        # pg.draw.polygon(WIN, RED, (((WIDTH / 2), (WIDTH / 2)),
+        #                            ((WIDTH / 2), SCALER_SIZE + (WIDTH / 2)),
+        #                            ((WIDTH / 2), (WIDTH / 2)),
+        #                            (SCALER_SIZE + (WIDTH / 2), (WIDTH / 2)),
+        #                            ((WIDTH / 2), (WIDTH / 2)),
+        #                            ((WIDTH / 2), (WIDTH / 2) - SCALER_SIZE),
+        #                            ((WIDTH / 2), (WIDTH / 2)),
+        #                            ((WIDTH / 2) - SCALER_SIZE, (WIDTH / 2))
+        #                            )
+        #                 , SCALER_THICKNESS)
+        #
+        # pg.draw.circle(WIN, GREEN, (WIDTH / 3,WIDTH / 3),CHARGE_SIZE)
+
+
         for event in pg.event.get():
             if event.type == pg.QUIT:
                 run = False
+
+        pg.display.update()
 
     pg.quit()

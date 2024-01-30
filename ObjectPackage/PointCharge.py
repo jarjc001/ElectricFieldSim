@@ -10,7 +10,7 @@ class PointCharge:
     and if they are +ve or -ve
     """
 
-    def __init__(self, x, y, q):
+    def __init__(self, x, y, q) -> None:
         """
         init for a point charge
         :param x: x positon
@@ -25,5 +25,5 @@ class PointCharge:
         else:  # negative
             self.colour = BLUE
 
-    def draw(self, win):
+    def draw(self, win) -> None:
         pg.draw.circle(win, self.colour, (int(self.x), int(self.y)), CHARGE_SIZE)
